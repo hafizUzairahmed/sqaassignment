@@ -11,10 +11,16 @@ import junit.framework.Assert;
 public class ExtractorUnitTest {
 
 	@Test
-	public void getTitleNull() {
+	public void getTitleTest() {
 		String name = "Mr. Jhon Lenon";
 		NameExtractor ext = new NameExtractor(name);
 		Assert.assertEquals("Mr", ext.getTitle());
+	}
+	@Test
+	public void getFirstNameTest() {
+		String name = "Mr. Jhon Lenon";
+		NameExtractor ext = new NameExtractor(name);
+		Assert.assertEquals("Jhon", ext.getFirstName());
 	}
 
 }

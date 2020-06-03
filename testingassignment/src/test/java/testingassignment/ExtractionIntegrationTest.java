@@ -15,5 +15,12 @@ public class ExtractionIntegrationTest {
 		
 		Assert.assertEquals("Mr", ext.getTitle());
 	}
+	@Test
+	public void testNameExtraction() {
+		Employee emp = new Employee("Mr. John Lenon");
+		NameExtractor ext = new NameExtractor(emp.getEmployeeName());
+		
+		Assert.assertTrue(ext.getFirstName().contentEquals("John"));
+	}
 
 }

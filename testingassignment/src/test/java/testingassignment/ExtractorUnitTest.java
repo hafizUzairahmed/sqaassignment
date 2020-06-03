@@ -22,5 +22,11 @@ public class ExtractorUnitTest {
 		NameExtractor ext = new NameExtractor(name);
 		Assert.assertEquals("Jhon", ext.getFirstName());
 	}
+	@Test
+	public void getFirstNameTestLength() {
+		String name = "Mr. Jhon Lenon";
+		NameExtractor ext = new NameExtractor(name);
+		Assert.assertTrue(ext.getFirstName().length() > 0);
+	}
 
 }
